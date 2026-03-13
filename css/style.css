@@ -1,0 +1,664 @@
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 90px;
+}
+
+/*HOME PAGE*/
+/*HEADER*/
+
+
+/*The header(navigation, img and portfolio) Styling */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1000;
+
+    background-color: rgb(34, 34, 34);
+    border-bottom: 2px solid white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 50px;
+    box-sizing: border-box;
+}
+
+/*To style the left side of the navigation ie the logo and the portolio text*/
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.portfolio{
+    color: white;
+    margin: 0;
+    font-size: 20px;
+}
+
+/*Navigtion menu styling*/
+.nav-menu{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+}
+
+.nav-menu a{
+    color: white;
+    text-decoration: none;
+    font-size:16px;
+}
+
+.nav-menu a:hover{
+    color: #f4c542;
+}
+
+
+
+
+
+
+
+/*BODY*/
+
+/* ---------- PAGE CONTAINER ---------- */
+/* ===== HERO (matches the template style) ===== */
+
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 40px;
+}
+
+/* main hero layout */
+#hero-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  min-height: calc(100vh - 110px); /* adjust if your fixed header height differs */
+}
+
+
+
+/* left text block */
+.hero-left{
+    flex: 2;
+}
+
+/* "WELCOME..." small text */
+#first-paragraph{
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    margin: 0 0 18px;
+}
+
+/* big headline */
+#first-header{
+    font-size: 64px;
+    line-height: 1.05;
+    font-weight: 500;
+    color: black;
+    margin: 0 0 18px;
+    white-space: nowrap;
+}
+
+/* highlight your name like the template */
+#name-header{
+    color:black;
+    
+}
+
+/* college line */
+.college{
+    font-size: 20px;
+    color: #222;
+    margin: 0 0 18px;
+}
+
+.college a{
+    color: #1a66ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.college a:hover{
+    text-decoration: underline;
+}
+
+/* paragraph body like the template: smaller, softer, readable width */
+.second-paragraph{
+    font-size: 16px;
+    line-height: 1.75;
+    color: #5d5d5d;
+    margin: 0 0 12px;
+    max-width: 520px;
+    white-space: nowrap;
+}
+
+/* buttons area */
+.hero-left .btn-hero{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 22px;
+    margin-right: 14px;
+    transition: 0.25s ease;
+    border: 1.5px solid #111;
+}
+
+
+.hero-buttons {
+    margin-top: 50px;       /* moves buttons downward */
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    gap: 20px;              /* space between buttons */
+}
+
+/* primary button */
+.hero-left .btn-hero.primary{
+    background: #111;
+    color: #fff;
+}
+
+.hero-left .btn-hero.primary:hover{
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+/* outline button */
+.hero-left .btn-hero.outline{
+    background: transparent;
+    color: #111;
+}
+
+.hero-left .btn-hero.outline:hover{
+    background: #111;
+    color: #fff;
+    transform: translateY(-1px);
+}
+
+/* right side image card like the template */
+.hero-right{
+    flex: 1;   /* takes 1 part */
+    display: flex;
+    justify-content: center;
+}
+
+.hero-card{
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    max-width: 440px;
+    width: 100%;
+}
+
+
+.hero-right img{
+    width: 320px;
+    height: auto;
+
+}
+
+.hero-role a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    position: relative;
+    
+}
+
+/* add external link icon */
+.hero-role a::after {
+    content: " ↗";             /* icon */
+    font-size: 0.85em;
+    margin-left: 4px;
+}
+
+/* hover effect */
+.hero-role a:hover {
+    color: gold;            /* darker blue on hover */
+    text-decoration: underline;
+}
+
+/* responsive */
+@media (max-width: 950px){
+    .container{
+    padding: 60px 20px;
+    }
+
+    #hero-content{
+    grid-template-columns: 1fr;
+    gap: 40px;
+    min-height: auto;
+    }
+
+    #first-header{
+    font-size: 44px;
+    }
+
+    .hero-left{
+    max-width: 100%;
+    }
+
+    .second-paragraph{
+    max-width: 100%;
+    }
+
+    .hero-card{
+    padding: 24px;
+    max-width: 520px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*FOOTER*/
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer-links{
+    margin-bottom: 20px;
+}
+
+.footer-links a{
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.footer-links a:hover{
+    color: #f4c542;
+}
+
+.footer p{
+    font-size: 12px;
+    opacity: 0.6;
+    margin-top: 25px;
+
+}
+
+/*Home Button styling*/
+.btn-primary {
+    display: inline-block;
+    background-color: #facc15;   /* yellow */
+    color: #000;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 25px;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #eab308;   /* darker yellow on hover */
+    transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+/* Projects Styling*/
+.project-header{
+    width: 100%;
+    max-width: 1100px;
+    margin: 60px 0 30px 0;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    border: 2px solid black;
+    padding: 14px 10px;
+    background: #fff;
+    letter-spacing: 2px;
+    
+}
+
+
+.project-container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+.project-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+/*Left side*/
+.project1-body{
+    flex: 1;
+
+}
+
+.project1-body p{
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 12px 0;
+    max-width: 520px;   /* optional: keeps line length readable */
+
+}
+
+
+/*Right side*/
+.project1-image{
+    flex: 1;              /* takes less space */
+    display: flex;
+    flex-direction: column;   /* STACK image then buttons */
+    align-items: center;      /* center horizontally */
+    gap: 20px;  
+
+}
+.project1-image img{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #ffd400;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+/* title inside left column */
+.project1-title{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 14px 0 6px 0;
+    white-space: normal;
+    color: #111;
+}
+@media (max-width: 768px){
+    .project-card{
+    flex-direction: column;
+    }
+
+.project1-image{
+    justify-content: flex-start;
+    margin-top: 15px;
+    }
+}
+.project-slide{
+    display: none;
+}
+
+.project-slide.active{
+    display: block;
+}
+
+.project-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.project-buttons button{
+    padding: 15px 35px; 
+    font-size: 18px;    
+    font-weight: bold;
+    border: none;
+    background-color: #ffd400; 
+    color: #111;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-width: 140px;
+}
+
+.project-buttons button:hover{
+background-color: #e6c200;
+    transform: translateY(-2px); 
+}
+
+
+/*Contact*/
+/* Contact Form Specific Styles */
+.form-group {
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #ffd400; /* Matching your yellow theme */
+    background-color: #fff;
+}
+
+#charCount {
+    text-align: right;
+    font-size: 13px;
+    color: #777;
+    margin-top: 8px;
+}
+
+/* Red feedback for invalid fields while typing */
+input:invalid:focus {
+    border-color: #ff4d4d;
+}
+
+
+
+/*Resume*/
+
+
+.resume-content{
+    max-width: 1100px;
+    margin: 60px auto;
+    background: #fff;
+    display: flex;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+    border-radius: 10px;
+    overflow: hidden; /* keeps divider clean */
+}
+
+/* Left column */
+.resume-left{
+    width: 35%;
+    padding: 40px 30px;
+  border-right: 1px solid #e6e6e6; /* vertical divider */
+}
+
+/* Right column */
+.resume-right{
+    width: 65%;
+    padding: 40px 35px;
+}
+
+/* Headings */
+.resume-left h2,
+.resume-right h2{
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #111;
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Left section spacing */
+.resume-contact,
+.resume-education,
+.resume-expertise{
+    margin-bottom: 28px;
+}
+
+.resume-left p{
+    margin: 6px 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.resume-photo {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.resume-photo img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;   /* makes it circular */
+    border: 4px solid #facc15;  /* your yellow theme */
+}
+
+/* Profile paragraph */
+.resume-profile p{
+    margin: 0;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+/* Line under headings */
+.resume-left h2::after,
+.resume-right h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;        /* length of line */
+    height: 2px;
+    background-color: #000;
+}
+
+/* Main resume title */
+.resume-main-title {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin: 60px 0 30px 0;
+    font-weight: 700;
+}
+
+/* Work experience blocks */
+.resume-work .job{
+    margin-top: 18px;
+}
+
+.resume-work h3{
+    margin: 14px 0 6px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+
+.job-meta{
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #666;
+}
+
+.resume-work ul{
+    margin: 0 0 10px 18px;
+    padding: 0;
+}
+
+.resume-work li{
+    margin-bottom: 8px;
+    color: #444;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.job-tools{
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive (stack columns on small screens) */
+@media (max-width: 900px){
+    .resume-content{
+    flex-direction: column;
+    margin: 30px 15px;
+    }
+
+    .resume-left,
+    .resume-right{
+    width: 100%;
+    padding: 28px 22px;
+    }
+
+    .resume-left{
+    border-right: none;
+    border-bottom: 1px solid #e6e6e6; /* divider becomes horizontal */
+    }
+}
