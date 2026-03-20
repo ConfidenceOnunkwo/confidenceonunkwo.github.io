@@ -1,3 +1,6 @@
+
+//Project
+
 document.addEventListener("DOMContentLoaded", () => {
     const slides = document.querySelectorAll(".project-slide");
     let currentIndex = 0;
@@ -12,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Attach to all Next buttons [cite: 68, 70]
+    // Attach to all Next button
     document.querySelectorAll(".nextBtn").forEach(button => {
         button.addEventListener("click", () => {
             currentIndex = (currentIndex + 1) % slides.length;
@@ -20,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Attach to all Previous buttons [cite: 68, 70]
+    // Attach to all Previous buttons
     document.querySelectorAll(".prevBtn").forEach(button => {
         button.addEventListener("click", () => {
             currentIndex = (currentIndex - 1 + slides.length) % slides.length;
@@ -31,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initialize the first project 
     showSlide(currentIndex);
 });
+
+
+
 
 /**Contact */
 /* Contact Form Validation Logic */

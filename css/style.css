@@ -53,8 +53,7 @@ body{
     display: flex;
     list-style: none;
     gap: 24px;
-    margin: 0;
-    padding: 0;
+    
     
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -80,7 +79,6 @@ body{
 /*BODY*/
 
 /* ---------- PAGE CONTAINER ---------- */
-/* ===== HERO (matches the template style) ===== */
 
 
 .container{
@@ -95,7 +93,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 40px;
-  min-height: calc(100vh - 110px); /* adjust if your fixed header height differs */
+    min-height: calc(100vh - 110px); /* adjust if your fixed header height differs */
 }
 
 
@@ -124,7 +122,7 @@ body{
     white-space: nowrap;
 }
 
-/* highlight your name like the template */
+/* highlight your name*/
 #name-header{
     color:black;
     
@@ -138,7 +136,7 @@ body{
 }
 
 .college a{
-    color: #1a66ff;
+    color: gold;
     text-decoration: none;
     font-weight: 600;
 }
@@ -147,7 +145,7 @@ body{
     text-decoration: underline;
 }
 
-/* paragraph body like the template: smaller, softer, readable width */
+/* paragraph body */
 .second-paragraph{
     font-size: 16px;
     line-height: 1.75;
@@ -157,55 +155,8 @@ body{
     white-space: nowrap;
 }
 
-/* buttons area */
-.hero-left .btn-hero{
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 20px;
-    border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 22px;
-    margin-right: 14px;
-    transition: 0.25s ease;
-    border: 1.5px solid #111;
-}
 
 
-.hero-buttons {
-    margin-top: 50px;       /* moves buttons downward */
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    gap: 20px;              /* space between buttons */
-}
-
-/* primary button */
-.hero-left .btn-hero.primary{
-    background: #111;
-    color: #fff;
-}
-
-.hero-left .btn-hero.primary:hover{
-    transform: translateY(-1px);
-    opacity: 0.95;
-}
-
-/* outline button */
-.hero-left .btn-hero.outline{
-    background: transparent;
-    color: #111;
-}
-
-.hero-left .btn-hero.outline:hover{
-    background: #111;
-    color: #fff;
-    transform: translateY(-1px);
-}
-
-/* right side image card like the template */
 .hero-right{
     flex: 1;   /* takes 1 part */
     display: flex;
@@ -394,14 +345,14 @@ body{
     font-size: 16px;
     line-height: 1.6;
     margin: 0 0 12px 0;
-    max-width: 520px;   /* optional: keeps line length readable */
+    max-width: 520px;   
 
 }
 
 
 /*Right side*/
 .project1-image{
-    flex: 1;              /* takes less space */
+    flex: 1;              
     display: flex;
     flex-direction: column;   /* STACK image then buttons */
     align-items: center;      /* center horizontally */
@@ -463,9 +414,12 @@ body{
 }
 
 .project-buttons button:hover{
-background-color: #e6c200;
+    background-color: #e6c200;
     transform: translateY(-2px); 
 }
+
+
+
 
 
 /*Contact*/
@@ -488,7 +442,7 @@ background-color: #e6c200;
     border: 1px solid #ddd;
     border-radius: 8px;
     font-size: 16px;
-    background-color: #fafafa;
+    background-color: #fafafb;
     transition: border-color 0.3s ease;
 }
 
@@ -510,6 +464,15 @@ background-color: #e6c200;
 input:invalid:focus {
     border-color: #ff4d4d;
 }
+#contactForm {
+    width: 100%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
 
 
 
@@ -530,7 +493,7 @@ input:invalid:focus {
 .resume-left{
     width: 35%;
     padding: 40px 30px;
-  border-right: 1px solid #e6e6e6; /* vertical divider */
+    border-right: 1px solid #e6e6e6; /* vertical divider */
 }
 
 /* Right column */
@@ -649,6 +612,7 @@ input:invalid:focus {
     .resume-content{
     flex-direction: column;
     margin: 30px 15px;
+    white-space: wrap;
     }
 
     .resume-left,
@@ -660,5 +624,316 @@ input:invalid:focus {
     .resume-left{
     border-right: none;
     border-bottom: 1px solid #e6e6e6; /* divider becomes horizontal */
+    }
+}
+
+
+
+
+
+
+/* 
+        MOBILE RESPONSIVE STYLE
+*/
+
+@media (max-width: 768px) {
+
+    body{
+        padding-top: 150px;
+    }
+
+    /* HEADER */
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 18px 20px;
+        gap: 14px;
+    }
+
+    .logo{
+        width: 48px;
+        height: 48px;
+    }
+
+    .portfolio{
+        font-size: 18px;
+    }
+
+    .nav-menu{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-menu a{
+        font-size: 15px;
+    }
+
+    /* GENERAL */
+    .container,
+    .project-container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* HOME PAGE */
+    #hero-content{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 28px;
+        min-height: auto;
+    }
+
+    .hero-left,
+    .hero-right{
+        width: 100%;
+    }
+
+    #first-paragraph{
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    #first-header{
+        font-size: 40px;
+        line-height: 1.2;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    .college{
+        font-size: 16px;
+    }
+
+    .second-paragraph{
+        font-size: 15px;
+        line-height: 1.8;
+        white-space: normal;
+    }
+
+    .hero-right img{
+        width: 100%;
+        max-width: 260px;
+    }
+
+    .btn-primary{
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    /* PROJECT PAGE */
+    .project-header{
+        font-size: 22px;
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    .project-card{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .project1-title{
+        font-size: 17px;
+    }
+
+    .project1-body p{
+        font-size: 15px;
+    }
+
+    .project1-image img{
+        max-width: 100%;
+    }
+
+    .project-buttons{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .project-buttons button{
+        width: 100%;
+    }
+
+    /* CONTACT PAGE */
+    .form-group input,
+    .form-group textarea{
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    /* RESUME PAGE */
+    .resume-main-title{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .resume-content{
+        flex-direction: column;
+        margin: 20px 16px;
+    }
+
+    .resume-left,
+    .resume-right{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .resume-left{
+        border-right: none;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    .resume-photo img{
+        width: 110px;
+        height: 110px;
+    }
+}
+
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 480px) {
+
+    body{
+        padding-top: 160px;
+    }
+
+    #first-header{
+        font-size: 32px;
+    }
+
+    .second-paragraph{
+        font-size: 14px;
+    }
+
+    .nav-menu a{
+        font-size: 14px;
+    }
+
+    .project-header{
+        font-size: 18px;
+    }
+
+    .resume-main-title{
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-header,
+    .resume-main-title {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px 0;
+        padding: 12px 10px;
+        box-sizing: border-box;
+    }
+}
+
+
+/* 
+    CLEAN RESUME MOBILE FIX
+ */
+@media (max-width: 768px) {
+
+    .resume-content{
+        margin: 20px 16px;
+        gap: 0;
+    }
+
+    .resume-left,
+    .resume-right{
+        width: 100%;
+        padding: 24px 20px;
+        box-sizing: border-box;
+    }
+
+    .resume-left{
+        border-right: none;
+        border-bottom: 1px solid #e6e6e6;
+    }
+
+    /* TEXT CLEANUP */
+    .resume-left p,
+    .resume-profile p,
+    .job-meta,
+    .resume-work li{
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+        margin-bottom: 14px;
+    }
+
+    /* HEADINGS */
+    .resume-left h2,
+    .resume-right h2{
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    /* SECTION SPACING */
+    .resume-profile,
+    .resume-work{
+        margin-bottom: 25px;
+    }
+
+    /* LIST FIX */
+    .resume-work ul{
+        margin-left: 18px;
+        padding-left: 10px;
+    }
+
+    /* JOB TITLE */
+    .resume-work strong{
+        font-size: 16px;
+        display: block;
+        margin-bottom: 6px;
+    }
+}
+
+/* 
+    HERO ALIGNMENT FIX (MOBILE)
+*/
+@media (max-width: 768px) {
+
+    /* Center everything in hero section */
+    #hero-content{
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-left{
+        align-items: center;
+        text-align: center;
+    }
+
+    /* Fix buttons */
+    .btn-primary{
+        width: 100%;
+        max-width: 300px;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Fix image alignment */
+    .hero-right{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-right img{
+        display: block;
+        margin: 0 auto;
+        max-width: 260px;
+        width: 100%;
+        height: auto;
+        border-radius: 10px; /* optional but nicer */
     }
 }

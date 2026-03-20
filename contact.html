@@ -5,17 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="contact.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
-        <!--NAVIGATION-->
+    <!--NAVIGATION-->
     <div class="header">
-
-        
-            <div class="brand">
+        <div class="brand">
             <img class="logo" src="pictures/official.jpeg" alt="Confidence Onunkwo">
             <h2 class="portfolio">PORTFOLIO</h2>
-            </div>
+        </div>
         <nav>
             <ul class="nav-menu">
                 <li class="home"><a href="index.html">Home</a></li>
@@ -26,14 +24,12 @@
         </nav>
     </div>
 
-
-
-            <!--BODY-->
+    <!--BODY-->
     <div class="project-container">
         <div class="project-header">Get In Touch</div>
         
         <div class="project-card">
-            <form id="contactForm" style="width: 100%;">
+            <form id="contactForm">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -56,27 +52,23 @@
                 </div>
 
                 <div class="project-buttons">
-                    <button type="submit" class="nextBtn" style="width: 100%;">Submit Message</button>
+                    <button type="submit" class="nextBtn">Submit Message</button>
                 </div>
             </form>
         </div>
         
-        <div id="successMessage" style="display:none; color: green; text-align: center; margin-top: 20px; font-weight: bold;"></div>
+        <div id="successMessage"></div>
     </div>
-
 
     <!--FOOTER-->
     <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/ConfidenceOnunkwo">GitHub</a>
+            <a href="www.linkedin.com/in/confidence-onunkwo-a126151b7">LinkedIn</a>
+            <a href="mailto:onun0003@algonquinlive.com">Email</a>
+        </div>
 
-    <div class="footer-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="mailto:onun0003@algonquinlive.com">Email</a>
-    </div>
-
-    <p>Copyright © 2026 Chiamaka Confidence Onunkwo. All rights reserved.</p>
-
-</footer>
-    
+        <p>Copyright © 2026 Chiamaka Confidence Onunkwo. All rights reserved.</p>
+    </footer>
 </body>
 </html>
